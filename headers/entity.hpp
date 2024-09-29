@@ -1,5 +1,5 @@
-#ifndef ENTITY_HPP
-#define ENTITY_HPP
+#ifndef A2_ENTITY_HPP
+#define A2_ENTITY_HPP
 
 #include <iostream>
 #include <memory>

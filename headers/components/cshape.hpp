@@ -1,5 +1,5 @@
-#ifndef CSHAPE_HPP
-#define CSHAPE_HPP
+#ifndef A2_CSHAPE_HPP
+#define A2_CSHAPE_HPP
 
 #include <vec2.hpp>
 #include <SFML/Graphics.hpp>

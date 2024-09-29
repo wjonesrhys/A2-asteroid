@@ -1,5 +1,5 @@
-#ifndef VEC2_HPP
-#define VEC2_HPP
+#ifndef A2_VEC2_HPP
+#define A2_VEC2_HPP
 
 #include <SFML/System/Vector2.hpp>
 #include <iostream>

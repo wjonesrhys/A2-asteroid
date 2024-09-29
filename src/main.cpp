@@ -137,6 +137,7 @@ int main()
     sf::RenderWindow renderWindow;
     sf::Font font;
     sf::Text text;
+    float extraSpeed = 1;
     bool showImGui = true;
     bool drawEntities = true;
     bool drawNames = true;
@@ -193,6 +194,9 @@ int main()
         {
             ImGui::SFML::Update(renderWindow, frameTime);
             ImGui::Begin("debug window");
+            ImGui::Text("entity speed:");
+            // ImGui::NewLine();
+            ImGui::InputFloat("##", &extraSpeed, 0, 1000, "%.3f", 0);
             ImGui::Checkbox("draw entities", &drawEntities);
             ImGui::Checkbox("draw text", &drawNames);
             ImGui::End();
@@ -213,9 +217,7 @@ int main()
 
                 if (event.key.code == sf::Keyboard::Num0) {
                     showImGui == true ? showImGui = false : showImGui = true;
-                    if (entities.size() > 0) {
-                        entities.at(0)->destroy();
-                    }
+
                 }
 
                 if (event.key.code == sf::Keyboard::Num9) {
@@ -225,6 +227,12 @@ int main()
                 if (event.key.code == sf::Keyboard::Num8) {
                     drawNames == true ? drawNames = false : drawNames = true;
                 }
+
+                if (event.key.code == sf::Keyboard::Num7) {
+                    if (entities.size() > 0) {
+                        entities.at(0)->destroy();
+                    }                
+                }
             }
         }
 
@@ -232,7 +240,7 @@ int main()
         while (accumulator >= TIME_PER_FRAME) {
             for (auto& entity : entities) {
                 entity->transform->prevPos = entity->transform->pos;
-                entity->transform->pos += entity->transform->speed*TIME_PER_FRAME.asSeconds();
+                entity->transform->pos += entity->transform->speed*TIME_PER_FRAME.asSeconds()*extraSpeed;
                 entity->shape->shape->setPosition(entity->transform->pos);
             }
             accumulator -= TIME_PER_FRAME;

@@ -1,5 +1,5 @@
-#ifndef CBBOX_HPP
-#define CBBOX_HPP
+#ifndef A2_CBBOX_HPP
+#define A2_CBBOX_HPP
 
 #include <vec2.hpp>
 

@@ -1,5 +1,5 @@
-#ifndef CTRANSFORM_HPP
-#define CTRANSFORM_HPP
+#ifndef A2_CTRANSFORM_HPP
+#define A2_CTRANSFORM_HPP
 
 #include <vec2.hpp>
 

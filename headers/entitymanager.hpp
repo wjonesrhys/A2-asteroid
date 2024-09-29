@@ -1,5 +1,5 @@
-#ifndef ENTITYMANAGER_HPP
-#define ENTITYMANAGER_HPP
+#ifndef A2_ENTITYMANAGER_HPP
+#define A2_ENTITYMANAGER_HPP
 
 #include <memory>
 #include <vector>
